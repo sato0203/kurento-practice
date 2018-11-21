@@ -23,12 +23,6 @@ export default class KurentoWrapperServer{
     constructor(Kurento:any,private option:KurentoWrapperServerOption){
         KurentoWrapperServer.Kurento = Kurento;
         const self = this;
-        var sessionHandler = session({
-            secret : 'none',
-            rolling : true,
-            resave : true,
-            saveUninitialized : true
-        });
 
         self.httpsServer = https.createServer(this.option.clientServerOption.httpsOption);
         self.httpsServer.listen(this.option.clientServerOption.port,function(){
@@ -102,10 +96,6 @@ export default class KurentoWrapperServer{
                 }
             }) 
         })
-        //ToDo
-        const expressPath = path.resolve(__dirname, '../frontend')
-        app.use(express.static(expressPath));
-        console.log(expressPath);
     }
 
     private getUniqueId = () => {
