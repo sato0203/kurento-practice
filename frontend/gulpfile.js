@@ -32,4 +32,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default',['react-compile'])
-gulp.task("develop",["react-compile","watch"])
+gulp.task("develop",["react-compile","webserver","watch"])

@@ -2,9 +2,6 @@ import * as WebSocketNode from "ws";
 import * as http from "http"
 import * as https from "https"
 import {KurentoWrapperWSMessageToServer, KurentoWrapperWSMessageToFrontend} from "../kurento-wrapper/kurento-wrapper-common"
-import * as express from "express";
-import * as path from "path";
-import * as session from "express-session"
 
 export type KurentoWrapperServerOption = {
     mediaServerOption:{
@@ -26,17 +23,14 @@ export default class KurentoWrapperServer{
     constructor(Kurento:any,private option:KurentoWrapperServerOption){
         KurentoWrapperServer.Kurento = Kurento;
         const self = this;
-        const app = express();
         var sessionHandler = session({
             secret : 'none',
             rolling : true,
             resave : true,
             saveUninitialized : true
         });
-        
-        app.use(sessionHandler);
 
-        self.httpsServer = https.createServer(this.option.clientServerOption.httpsOption,app);
+        self.httpsServer = https.createServer(this.option.clientServerOption.httpsOption);
         self.httpsServer.listen(this.option.clientServerOption.port,function(){
             console.log(`Server is listening on port ${self.option.clientServerOption.port}`)
         })
