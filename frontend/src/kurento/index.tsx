@@ -5,7 +5,7 @@ import KurentoWrapper from "./kurento-wrapper-frontend";
 type KurentoUtilOption = {
     localVideo? : HTMLVideoElement,
     remoteVideo? : HTMLVideoElement,
-    oniceecandidate : (candidate:any) => void
+    onicecandidate : (candidate:any) => void
 }
 
 class KurentoComponent extends React.PureComponent{

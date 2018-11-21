@@ -13,7 +13,7 @@ export type KurentoFrontendWrapperOptionType = {
 type KurentoUtilOption = {
     localVideo? : HTMLVideoElement,
     remoteVideo? : HTMLVideoElement,
-    oniceecandidate : (candidate:any) => void
+    onicecandidate : (candidate:any) => void
 }
 
 export default class KurentoFrontendWrapper{
@@ -57,7 +57,7 @@ export default class KurentoFrontendWrapper{
         const utilOption:KurentoUtilOption = {
             "localVideo" : this.option.videoElementForSend,
             "remoteVideo" : this.option.videoElementForReceive,
-            "oniceecandidate" : function(candidate){self.onIceCandidate(candidate)}
+            "onicecandidate" : function(candidate){self.onIceCandidate(candidate)}
         }
         self.webRtcPeer = kurentoUtils.WebRtcPeer.WebRtcPeerSendrecv(utilOption,function(error:any){
             if (error) {
