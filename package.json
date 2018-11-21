@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "kurento-client": "^6.8.0",
+    "minimist": "^1.2.0",
+    "source-map-loader": "^0.2.4",
+    "source-map-support": "^0.5.9",
+    "ws": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/express-session": "^1.15.11",
+    "@types/node": "^10.12.9",
+    "@types/ws": "^6.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "espower-typescript": "^9.0.1",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "typescript": "^3.1.6",
+    "webpack-stream": "^5.1.1"
+  }
+}

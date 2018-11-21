@@ -1,0 +1,32 @@
+{
+  "name": "frontned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "kurento-utils": "^6.8.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/kurento-utils": "^6.7.0",
+    "@types/react": "^16.7.6",
+    "@types/react-dom": "^16.0.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
+    "source-map-loader": "^0.2.4",
+    "source-map-support": "^0.5.9",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.0",
+    "webpack-stream": "^5.1.1"
+  }
+}
